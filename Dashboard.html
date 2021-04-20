@@ -21,9 +21,9 @@
 <body>
 <nav class="navbar sticky-top navbar-light" style="background-color: #e3f2fd;">
     <div class="container-fluid">
-        <a style="margin-right: 1.25rem" class="navbar-brand" href="#"> Career corner<img style="padding-left:6px;width:30px;height:30px" src="open-book.png"></a>
+        <a style="margin-right: 1.25rem" class="navbar-brand" href="index.html"> Career corner<img style="padding-left:6px;width:30px;height:30px" src="open-book.png"></a>
         <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <input id="searchbar" class="form-control" class="myInput" type="text" placeholder="Search..">
             <button class="btn" type="submit"><img style="width:20px;height:20px" src="loupe.png"></button>
         </form>
     </div>
@@ -93,10 +93,12 @@
         <div class="col-3">
             <h2 class="mt-2" style="text-align: center">FILTERS</h2>
             <label class="mt-2" for="fname">Course Name</label>
-            <select class="form-select  mb-3" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">Research Methodology and Statistical Analysis</option>
-                <option value="2">Agricultural Policy: Formulation Components Process Implementation and Comparative Analysis</option>
+            <select onchange="la(this.value)" class="form-select  mb-3" >
+                <option selected value="">Select from Below</option>
+
+                <option value="index.html">ALL</option>
+                <option value="page1.html">Research Methodology and Statistical Analysis</option>
+                <option value="page2.html">Agricultural Policy: Formulation Components Process Implementation and Comparative Analysis</option>
                 <option value="3">Social Processes and Behaviour Issues</option>
                 <option value="4">(Basic French : Course 1) BFLI 001:Parler de soi / Talking About Oneself</option>
                 <option value="5">Accountancy XI Part-I</option>
@@ -116,7 +118,7 @@
             </select>
             <label class="mt-2" for="fname">Course Subject</label>
             <select class="form-select mb-3" aria-label="Default select example">
-                <option selected>Open this select menu</option>
+                <option selected>All</option>
                 <option value="1">Statistical Analysis</option>
                 <option value="2">Agriculture</option>
                 <option value="3">Social Processes and Behaviour Issues</option>
@@ -127,11 +129,12 @@
             </select>
 
         </div>
-        <div class="col-9">
+
+        <div id="myDIV" class="col-9">
             <div  style="margin-top: 1.5rem" class="container">
                 <div class="row">
                     <div class="col-sm">
-                        <div class="card border-secondary"     class="card"  >
+                        <div data-search="Research Methodology and Statistical Analysis" class="card border-secondary"     class="card"  >
                             <div class="card-header">
                                 <img style="width: 100%" src="Research%20Methodology%20and%20Statistical%20Analysis_01_00063.jpg">
                             </div>
@@ -148,7 +151,7 @@
 
                     </div>
                     <div class="col-sm">
-                        <div class="card border-secondary"     class="card"  >
+                        <div data-search="Agricultural Policy: Formulation Components Process Implementation and Comparative Analysis" class="card border-secondary"     class="card"  >
                             <div class="card-header">
                                 <img style="width: 100%" src="MNR-002-Agricultural%20Policy_Course_Image.jpg">
                             </div>
@@ -165,7 +168,7 @@
 
                     </div>
                     <div class="col-sm">
-                        <div class="card border-secondary"     class="card"  >
+                        <div data-search="Social Processes and Behaviour Issues"  class="card border-secondary"     class="card"  >
                             <div class="card-header">
                                 <img style="width: 100%" src="Social%20Processes%20and%20Behaviour%20Issues.jpg">
                             </div>
@@ -186,7 +189,7 @@
             <div  style="margin-top: 1.5rem" class="container">
                 <div class="row">
                     <div class="col-sm">
-                        <div class="card border-secondary"     class="card"  >
+                        <div data-search="(Basic French : Course 1) BFLI 001:Parler de soi / Talking About Oneself" class="card border-secondary"     class="card"  >
                             <div class="card-header">
                                 <img style="width: 100%" src="FRENCH%20BG.jpg">
                             </div>
@@ -203,7 +206,7 @@
 
                     </div>
                     <div class="col-sm">
-                        <div class="card border-secondary"     class="card"  >
+                        <div data-search="Accountancy XI Part-I" class="card border-secondary"     class="card"  >
                             <div class="card-header">
                                 <img style="width: 100%" src="1.png">
                             </div>
@@ -220,7 +223,7 @@
 
                     </div>
                     <div class="col-sm">
-                        <div class="card border-secondary"     class="card"  >
+                        <div data-search="Accountancy XII Part-I" class="card border-secondary"     class="card"  >
                             <div class="card-header">
                                 <img style="width: 100%" src="28.png">
                             </div>
@@ -293,6 +296,23 @@
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="app.js"></script>
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="e-search.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
 </body>
