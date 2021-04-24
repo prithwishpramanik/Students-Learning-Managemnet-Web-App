@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+    <title> CareerCorner</title>
+</head>
+<style>
+    body{
+        font-family: 'PT Serif', serif;, cursive;
+        background-color: #fad1b9;
+
+    }
+    .filter{height: 21rem;
+        width: 20rem;
+        border-style: solid;
+        border-width:5px;
+        margin-top: 15px;
+        background-color: #d67b54;
+        float: right;
+        padding: 14px;}
+
+</style>
+<body>
+<nav class="navbar sticky-top navbar-light" style="background-color: #b36030;">
+    <div class="container-fluid">
+        <a style="margin-right: 1.25rem;
+                  font-family: 'Bangers', cursive;
+                   padding-left: 2%;
+                   size: 10px;" class="navbar-brand" href="index.html"> <b>CareerCorner</b><img style="padding-left:6px;width:30px;height:30px" src="open-book.png"></a>
+        <form class="d-flex">
+            <input id="searchbar" class="form-control" class="myInput" type="text" placeholder="Search..">
+            <button class="btn" type="submit"><img style="width:20px;height:20px" src="loupe.png"></button>
+        </form>
+    </div>
+</nav>
+
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-3" style="border-right: 2px solid black;">
+            <div class ="filter" >
+
+                <h2 class="mt-2" style="text-align: center">FILTERS</h2>
+                <label class="mt-2" for="fname">Course Name</label>
+                <select onchange="la(this.value)" class="form-select  mb-3" >
+                    <option selected value="">Select from Below</option>
+
+                    <option value="Dashboard.html">ALL</option>
+                    <option value="page1.html">Research Methodology and Statistical Analysis</option>
+                    <option value="page2.html">Agricultural Policy: Formulation Components Process Implementation and Comparative Analysis</option>
+                    <option value="3">Social Processes and Behaviour Issues</option>
+                    <option value="4">(Basic French : Course 1) BFLI 001:Parler de soi / Talking About Oneself</option>
+                    <option value="5">Accountancy XI Part-I</option>
+                    <option value="6">Accountancy XII Part-I</option>
+
+
+                </select>
+                <label class="mt-2" for="fname">Course Duration</label>
+                <select class="form-select mb-3" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">16 Weeks</option>
+                    <option value="2">15 Weeks</option>
+                    <option value="3">16 Weeks</option>
+                    <option value="4">12 Weeks</option>
+                    <option value="5">24 Weeks</option>
+                    <option value="6">24 Weeks</option>
+                </select>
+                <label class="mt-2" for="fname">Course Subject</label>
+                <select class="form-select mb-3" aria-label="Default select example">
+                    <option selected>All</option>
+                    <option value="1">Statistical Analysis</option>
+                    <option value="2">Agriculture</option>
+                    <option value="3">Social Processes and Behaviour Issues</option>
+                    <option value="4">Basic French</option>
+                    <option value="5">Accountancy </option>
+
+
+                </select>
+
+            </div>
+        </div>
+        <div class="col-9">
+            <div id="myDIV" >
+
+                <div  style="margin-top: 1.5rem" class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <div data-search="Research Methodology and Statistical Analysis" class="card border-secondary"     class="card"  >
+                                <div class="card-header">
+                                    <img style="width:100%;" src="Research%20Methodology%20and%20Statistical%20Analysis_01_00063.jpg">
+                                </div>
+                                <div  class="card-body">
+                                    <h5 style="text-align: center" class="card-title">Research Methodology and Statistical Analysis
+                                    </h5>
+                                    <p class="card-text" ><a href="#" class="text-primary">By Dr. Subodh Kesharwani</a></p>
+                                    <div  class="d-grid gap-2 d-md-flex justify-content-md-end " >
+                                        <button style="border-radius:20px"  class="btn btn-primary me-md-2" type="button" ><a style="color:white;   text-decoration: none;" href="course%201.html" target="_blank">Go To Course</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="app.js"></script>
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="e-search.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>
