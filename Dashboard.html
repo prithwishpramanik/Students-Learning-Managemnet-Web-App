@@ -28,9 +28,42 @@
           background-color: #d67b54;
           float: right;
           padding: 14px;}
+    #loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        width: 120px;
+        height: 120px;
+        margin: -76px 0 0 -76px;
+        border-top: 16px solid blue;
+        border-right: 16px solid green;
+        border-bottom: 16px solid red;
+        border-left: 16px solid pink;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    #Div {
+        display: none;
+        text-align: center;
+    }
     
 </style>
-<body>
+<body onload="myFunction()" style="margin:0;">
+<div id="loader"></div>
+
+<div style="display:none;" id="Div" class="animate-bottom">
 <nav class="navbar sticky-top navbar-light" style="background-color: #b36030;">
     <div class="container-fluid">
         <a style="margin-right: 1.25rem;
@@ -265,13 +298,22 @@
 </div>
 
         </div>
-    </div>
-    
-  </div>
 </div>
 
 
+
+
 <script>
+    var myVar;
+
+    function myFunction() {
+        myVar = setTimeout(showPage, 3000);
+    }
+
+    function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("Div").style.display = "block";
+    }
     document.querySelector('#result').innerHTML=localStorage.getItem('name');
     document.querySelector('#profile_pic').setAttribute("src",localStorage.getItem('picture'));
 </script>
