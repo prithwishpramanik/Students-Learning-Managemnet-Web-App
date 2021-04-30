@@ -6,6 +6,8 @@
 <h1>Login Prompt</h1><br>
 <img src="Screenshot (264).png"><br>
 <h1>Dashboard</h1><br>
+<img src="WhatsApp Image 2021-04-29 at 3.48.51 PM.jpeg"><br>
+<img src="WhatsApp Image 2021-04-29 at 3.49.15 PM.jpeg"><br>
 <img src="Screenshot (266).png"><br>
 
 <h1>LIVE DEMO OF THE PROJECT</h1><br>
