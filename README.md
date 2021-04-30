@@ -15,6 +15,7 @@ https://student-learning-managment-app.herokuapp.com/
 
 <h1>CONTRIBUTERS</h1><br>
 <h2>This project is jointly made by Swarnali Bhunia & Prithwish Pramanik</h2>
+<h4>©Swarnali Bhunia & Prithwish Pramanik</h4>
 
 
 
